@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul li.animated-li{
+    display: inline-block;
+    transform-style: preserve-3d;
+}
+ul li.animated-li a{
+    color: transparent;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    position: relative;
+}
+ul li.animated-li a span{
+    display: block;
+    padding: 15px 20px;
+}
+
+.pdpu-logo{
+    height: 60px;
+}
+.nav-toggler-color{
+    background-color: #F48621!important;
+}
+ul li.animated-li a span::before{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #F48621;
+    color: #fff;
+    padding: 15px 20px;
+    transform-style: preserve-3d;
+    transition: .3s;
+    transform: rotateX(90deg) translateY(50px);
+    transform-origin: bottom;
+}
+ul li.animated-li a span:hover::before{
+    transform: rotateX(0deg) translateY(0px);
+}
+ul li.animated-li a span::after{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    color: #fff;
+    padding: 15px 20px;
+    transform-style: preserve-3d;
+    transition: .3s;
+    transform: rotateX(0deg) translateY(0px);
+    transform-origin: top;
+}
+ul li.animated-li a span:hover::after{
+    transform: rotateX(90deg) translateY(-10px);
+}
+
+ul:hover li.animated-li{
+    opacity: .2;
+    filter: blur(2px);
+}
+ul li.animated-li:hover{
+    opacity: 1;
+    filter: blur(0px);
+}
+.solid{
+    background: #123062;
+}
+section.pdpu-main-image{
+    width: 100%;
+    height: 100vh;
+    background: url(./asset/pdpu-main.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.showcase-pdpu-text{
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 150px;
+    z-index: 10;
+    font-weight: initial;
+    font-family: revert;
+    color: #1a08bb;
+    background-image: -webkit-linear-gradient(92deg, #471edb, #f78216);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: pdpu-text-color-ani 5s infinite linear;
+}
+@-webkit-keyframes pdpu-text-color-ani {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+
+.pdpu-news{
+    background: #fff5df;
+}
+.wrap-news-image{
+    overflow: hidden;
+}
+.news-image { 
+    transition: all .2s ease-in-out; 
+}
+.news-image:hover { 
+    transform: scale(1.1); 
+}
+.in-shadow{
+    /* box-shadow: inset 5px 5px 8px blue; */
+    box-shadow: inset 0px -8px 16px #000000;
+}
+
+.news1{
+    position: relative;
+}
+
+.news1-text{
+    position: absolute;
+    top: 80%;
+    text-align: center;
+}
+.btn-style{
+        padding: 6px 85px;
+        background: #f78216;
+        border: none;
+        color: white;
+        font-size: large;
+        transition: .5s;
+}
+.btn-style:hover{
+    background: #db7a1e;
+}
+
+@media(max-width: 768px){
+    .btn-style{
+        padding: 6px 40px;
+    }
+}
+
+
+.pdpu-school-card {
+
+    background: #abbaab; 
+    background: -webkit-linear-gradient(190deg, #ffffff, #abbaab);
+    background: linear-gradient(190deg, #ffffff, #abbaab);
+
+
+    /*  background: #8e9eab; 
+        background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+        background: linear-gradient(to right, #eef2f3, #8e9eab); 
+    */
+
+    width: 310px;
+    min-height: 404.5px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 70px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.pdpu-school-card:hover{
+    background: #abbaab; 
+    background: -webkit-linear-gradient(190deg, #ffffff, #ffffff);
+    background: linear-gradient(190deg, #ffffff, #ffffff);
+    transform: translateY(-5%);
+}
+.pdpu-school-card img {
+  margin: 0px;
+  padding: 0px 0px 15px 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 30px;
+  color: #fff;
+}
+.pdpu-school-card hr {
+  display: block;
+  border: none;
+  height: 3px;
+  background-color: #db7a1e;
+  margin: 0px;
+}
+.pdpu-school-card p {
+  margin: 15px 0px 0px 0px;
+  font-weight: 100;
+  letter-spacing: -0.25px;
+  line-height: 1.25;
+  font-size: 16px;
+  word-break: break-all;
+  word-wrap: pre-wrap;
+}
+.pdpu-school-card button {
+  border: none;
+  background-color: #f78216;
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px 14px;
+  color: white;
+  text-transform: uppercase;
+  transition: .5s;
+}
+.pdpu-school-card button:hover{
+    background: #db7a1e;
+}
+
+.campus-img{
+    transition: .5s;
+}
+.campus-img:hover{
+    transform: translateY(-5%);
+}
+
+
+
+#footer {
+    background: #123062 !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
